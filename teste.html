@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#mostra").hide();
+
+            $("#oculta").click(function(){
+                $("div").hide();
+                $("#oculta").hide();
+                $("#mostra").show();
+
+            });
+
+            $("#mostra").click(function(){
+                $("div").show();
+                $("#mostra").hide();
+                $("#oculta").show();
+
+            });
+
+        });
+    </script>
+
+    <title>Alice</title>
+</head>
+<body>
+
+    <h1>Welcome to the Wonderland!!!</h1>
+
+    <button type="button" id="mostra">Mostre-me!</button>
+    <button type="button" id="oculta">Oculte-me!</button>
+
+    <p>Alice era uma garota curiosa</p>
+
+    <div style="background-color: aquamarine">
+        <p>E assim acaba-se tudo, começos e fins são abirtrários.</p>
+    </div>
+
+    <p>Que um dia morreu de curiosidade</p>
+
+
+
+</body>
+</html>
