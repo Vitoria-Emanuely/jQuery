@@ -3,48 +3,54 @@
 <head>
     <meta charset="UTF-8">
 
+    <link rel="shortcut icon" href="favicon.ico" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <script>
+    <script type="text/javascript">
         $(document).ready(function(){
 
-            $("#mostra").hide();
-
-            $("#oculta").click(function(){
+            $("#mostrar").hide();
+            
+            //Ao clicar no botão ocultar
+            $("#ocultar").click(function(){
+                //Ocultar a div
                 $("div").hide();
-                $("#oculta").hide();
-                $("#mostra").show();
+                $("#ocultar").hide();
+                $("#mostrar").show();
 
             });
 
-            $("#mostra").click(function(){
+            //Ao clicar no botão mostrar
+            $("#mostrar").click(function(){
+                //Exibir a div
                 $("div").show();
-                $("#mostra").hide();
-                $("#oculta").show();
+                $("#mostrar").hide();
+                $("#ocultar").show();
 
             });
 
         });
     </script>
 
-    <title>Alice</title>
+    <title>Imp</title>
 </head>
 <body>
 
-    <h1>Welcome to the Wonderland!!!</h1>
+    <h1>A Menina Submersa</h1>
 
-    <button type="button" id="mostra">Mostre-me!</button>
-    <button type="button" id="oculta">Oculte-me!</button>
+    <button type="button" id="mostrar">Mostre-me!</button>
+    <button type="button" id="ocultar">Oculte-me!</button>
 
-    <p>Alice era uma garota curiosa</p>
+    <p>"Dualidade. A mutabilidade da carne. Transição. Ter de esconder o seu eu verdadeiro. Máscaras. Segredos. Sereias, lobisomens, gênero. As reações que podemos ter diante da verdade das coisas, diante da expressão mais sincera de alguém, diante dos fatos que ocorrem contra as nossas expectativas e os nossos preconceitos. Confissões. Metáforas. Transformação. Por isso, é muito relevante. Não apenas uma conversa casual na hora do café. Não deixe nada relevante de fora, por mais trivial que possa parecer."</p>
 
-    <div style="background-color: aquamarine">
-        <p>E assim acaba-se tudo, começos e fins são abirtrários.</p>
+    <div style="background-color: hotpink">
+        <p>"Nenhuma história tem começo e nenhuma história tem fim. Começos e fins podem ser entendidos como algo que serve a um propósito, a uma intenção momentânea e provisória, mas são, em sua natureza fundamental, arbitrários e existem apenas como uma ideia conveniente na mente humana. As vidas são confusas e, quando começamos a relacioná-las, ou relacionar parte delas, não podemos mais discernir os momentos precisos e objetivos de quando certo evento começou. Todos os começos são arbitrários."</p>
     </div>
 
-    <p>Que um dia morreu de curiosidade</p>
+    <p>"O que mais tememos não é o conhecido. O conhecido, por mais horrível ou prejudicial à existência, é algo que podemos compreender. Sempre podemos reagir ao conhecido. Podemos traçar planos contra ele. Podemos aprender suas fraquezas e derrotá-lo. Podemos nos recuperar de seus ataques. Uma coisa tão simples quanto uma bala poderia ser suficiente. Mas o desconhecido desliza através de nossos dedos, tão insubstancial quanto o nevoeiro".</p>
 
-
+    <img src="http://sfmag.hu/wp-content/uploads/2013/10/perrault1.png"/>
 
 </body>
 </html>
