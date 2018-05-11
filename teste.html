@@ -5,6 +5,20 @@
 
     <link rel="shortcut icon" href="favicon.ico" />
 
+    <style type="text/css">
+        div h2 {
+            background-color: hotpink;
+            margin: 0px;
+            padding-left: 10px ;
+        }
+
+        div p{
+            border: 2px solid hotpink;
+            margin-top: 0px;
+        }
+
+    </style>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -15,7 +29,7 @@
             //Ao clicar no botão ocultar
             $("#ocultar").click(function(){
                 //Ocultar a div
-                $("div").hide();
+                $("#principal").hide("slow");
                 $("#ocultar").hide();
                 $("#mostrar").show();
 
@@ -24,11 +38,69 @@
             //Ao clicar no botão mostrar
             $("#mostrar").click(function(){
                 //Exibir a div
-                $("div").show();
+                $("#principal").show("slow");
                 $("#mostrar").hide();
                 $("#ocultar").show();
 
             });
+
+            $("#alternar").click(function () {
+                $("#principal").toggle(5000);
+
+            });
+
+            //Métodos fade - Aparecer
+
+            $("#ocultarfade").click(function () {
+                $("#principal").fadeOut("slow");
+
+            });
+            $("#mostrarfade").click(function () {
+                $("#principal").fadeIn(5000);
+
+            });
+            $("#alternarfade").click(function () {
+                $("#principal").fadeToggle("slow");
+
+            });
+
+            //Métodos slide - Deslizar
+
+            $("#ocultarslide").click(function () {
+                $("#principal").slideUp("slow");
+
+            });
+            $("#mostrarslide").click(function () {
+                $("#principal").slideDown(5000);
+
+            });
+            $("#alternarslide").click(function () {
+                $("#principal").slideToggle("slow");
+
+            });
+
+            //ACCORDION
+
+            // $("#principal h2").click(function () {
+            //     $("#principal p").slideToggle("slow")
+            //
+            // });
+            //
+            // $("#principal2 h2").click(function () {
+            //     $("#principal2 p").slideToggle("slow")
+            //
+            // });
+            //
+            // $("#principal3 h2").click(function () {
+            //     $("#principal3 p").slideToggle("slow")
+            //
+            // });
+
+            $(".accordion h2").click(function () {
+                $(this).parent().find("p").slideToggle("slow")
+
+            });
+
 
         });
     </script>
@@ -39,12 +111,32 @@
 
     <h1>A Menina Submersa</h1>
 
-    <button type="button" id="mostrar">Mostre-me!</button>
-    <button type="button" id="ocultar">Oculte-me!</button>
+    <button id="mostrar">Show!</button>
+    <button id="ocultar">Hide!</button>
+    <button id="alternar">Toggle!</button>
+
+    <button id="mostrarfade">FadeIn!</button>
+    <button id="ocultarfade">FadeOut!</button>
+    <button id="alternarfade">FadeToggle!</button>
+
+    <button id="mostrarslide">slideDown!</button>
+    <button id="ocultarslide">slideUp!</button>
+    <button id="alternarslide">SideToggle!</button>
 
     <p>"Dualidade. A mutabilidade da carne. Transição. Ter de esconder o seu eu verdadeiro. Máscaras. Segredos. Sereias, lobisomens, gênero. As reações que podemos ter diante da verdade das coisas, diante da expressão mais sincera de alguém, diante dos fatos que ocorrem contra as nossas expectativas e os nossos preconceitos. Confissões. Metáforas. Transformação. Por isso, é muito relevante. Não apenas uma conversa casual na hora do café. Não deixe nada relevante de fora, por mais trivial que possa parecer."</p>
 
-    <div style="background-color: hotpink">
+    <div class="accordion" id="principal" ">
+        <h2>Este título deve ser clicável</h2>
+        <p>"Nenhuma história tem começo e nenhuma história tem fim. Começos e fins podem ser entendidos como algo que serve a um propósito, a uma intenção momentânea e provisória, mas são, em sua natureza fundamental, arbitrários e existem apenas como uma ideia conveniente na mente humana. As vidas são confusas e, quando começamos a relacioná-las, ou relacionar parte delas, não podemos mais discernir os momentos precisos e objetivos de quando certo evento começou. Todos os começos são arbitrários."</p>
+    </div>
+
+    <div class="accordion" id="principal2">
+        <h2>Este título deve ser clicável 2</h2>
+        <p>"Nenhuma história tem começo e nenhuma história tem fim. Começos e fins podem ser entendidos como algo que serve a um propósito, a uma intenção momentânea e provisória, mas são, em sua natureza fundamental, arbitrários e existem apenas como uma ideia conveniente na mente humana. As vidas são confusas e, quando começamos a relacioná-las, ou relacionar parte delas, não podemos mais discernir os momentos precisos e objetivos de quando certo evento começou. Todos os começos são arbitrários."</p>
+    </div>
+
+    <div class="accordion" id="principal3">
+        <h2>Este título deve ser clicável 3</h2>
         <p>"Nenhuma história tem começo e nenhuma história tem fim. Começos e fins podem ser entendidos como algo que serve a um propósito, a uma intenção momentânea e provisória, mas são, em sua natureza fundamental, arbitrários e existem apenas como uma ideia conveniente na mente humana. As vidas são confusas e, quando começamos a relacioná-las, ou relacionar parte delas, não podemos mais discernir os momentos precisos e objetivos de quando certo evento começou. Todos os começos são arbitrários."</p>
     </div>
 
