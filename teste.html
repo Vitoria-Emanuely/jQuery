@@ -17,6 +17,21 @@
             margin-top: 0px;
         }
 
+        body{
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        .verde{
+            color: mediumspringgreen;
+        }
+
+        .amarela{
+            color: yellow;
+        }
+
+
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -82,22 +97,34 @@
             //ACCORDION
 
             // $("#principal h2").click(function () {
-            //     $("#principal p").slideToggle("slow")
+            //     $("#principal p").slideToggle("slow");
             //
             // });
             //
             // $("#principal2 h2").click(function () {
-            //     $("#principal2 p").slideToggle("slow")
+            //     $("#principal2 p").slideToggle("slow");
             //
             // });
             //
             // $("#principal3 h2").click(function () {
-            //     $("#principal3 p").slideToggle("slow")
+            //     $("#principal3 p").slideToggle("slow");
             //
             // });
 
             $(".accordion h2").click(function () {
-                $(this).parent().find("p").slideToggle("slow")
+                $(this).parent().find("p").slideToggle("slow");
+
+            });
+
+            $("div h2").dblclick(function () {
+                //ACRESCENTANDO UMA CLASSE CSS
+                $(this).toggleClass("verde");
+
+            });
+
+            $("div h2").hover(function () {
+               $(this).addClass('amarela');}, function () {
+                $(this).removeClass('amarela');
 
             });
 
@@ -142,7 +169,8 @@
 
     <p>"O que mais tememos não é o conhecido. O conhecido, por mais horrível ou prejudicial à existência, é algo que podemos compreender. Sempre podemos reagir ao conhecido. Podemos traçar planos contra ele. Podemos aprender suas fraquezas e derrotá-lo. Podemos nos recuperar de seus ataques. Uma coisa tão simples quanto uma bala poderia ser suficiente. Mas o desconhecido desliza através de nossos dedos, tão insubstancial quanto o nevoeiro".</p>
 
-    <img src="http://sfmag.hu/wp-content/uploads/2013/10/perrault1.png"/>
+    <img id="img" src="http://sfmag.hu/wp-content/uploads/2013/10/perrault1.png"/>
+
 
 </body>
 </html>
