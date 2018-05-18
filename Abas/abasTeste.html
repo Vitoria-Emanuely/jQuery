@@ -12,19 +12,20 @@
         $(document).ready(function () {
             //Para testar o jquery
             // alert('Jquery OK');
+            $("#abas ul li").addClass("selecionado");
             //Ao clicar em qualquer li
             $("#abas ul li").click(function () {
-                //Remove a class de todos li
-                $("#abas ul li").removeClass("selecionado");
-                //Adiciona a class apenas no clicado
-                $(this).addClass("selecionado");
+                //Alterna entre selecionado e não
+                 $(this).toggleClass("selecionado");
 
                 //Descobrir id de quem foi clicado
                 var meuId = $(this).attr("id");
-                $(".conteudo").hide();
-                $("."+meuId).show();
+
+                //Alterna a exibição do conteúdo correspondente
+                $("."+meuId).toggle();
 
             });
+
         });
 
     </script>
