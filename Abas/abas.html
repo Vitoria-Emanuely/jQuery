@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abas</title>
+
+    <link rel="stylesheet" href="abas.css">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            //Para testar o jquery
+           // alert('Jquery OK');
+            //Ao clicar em qualquer li
+            $("#abas ul li").click(function () {
+                //Remove a class de todos li
+                $("#abas ul li").removeClass("selecionado");
+                //Adiciona a class apenas no clicado
+                $(this).addClass("selecionado");
+
+                //Descobrir id de quem foi clicado
+                var meuId = $(this).attr("id");
+                $(".conteudo").hide();
+                $("."+meuId).show();
+                
+
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="abas">
+        <ul>
+            <li id="aba1" class="selecionado">A Menina Submersa</li>
+            <li id="aba2">Laranja Mecânica</li>
+            <li id="aba3">A Desconstrução de Mara Dyer</li>
+        </ul>
+    </div>
+    <div id="conteudos">
+        <div class="conteudo aba1">
+            "Nenhuma história tem começo e nenhuma história tem fim. Começos e fins podem ser entendidos como algo que serve a um propósito, a uma intenção momentânea e provisória, mas são, em sua natureza fundamental, arbitrários e existem apenas como uma ideia conveniente na mente humana. As vidas são confusas e, quando começamos a relacioná-las, ou relacionar parte delas, não podemos mais discernir os momentos precisos e objetivos de quando certo evento começou. Todos os começos são arbitrários."
+        </div>
+        <div class="conteudo aba2">
+            "Transformar um jovem decente em uma coisa mecânica não deveria, certamente, ser encarado como triunfo para nenhum governo, a não ser aquele que se gabe de sua capacidade de repressão."
+        </div>
+        <div class="conteudo aba3">
+            "É preciso ser um artista e um louco, uma criatura de infinita melancolia, para discernir, imediatamente, o demoniozinho mortal entre as crianças puras. Ela não é reconhecida pelas demais crianças e tampouco tem consciência do seu fantástico poder."
+        </div>
+    </div>
+
+
+</body>
+</html>
